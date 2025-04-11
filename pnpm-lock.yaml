@@ -54,6 +54,9 @@ importers:
       '@vitejs/plugin-vue':
         specifier: ^5.2.3
         version: 5.2.3(vite@5.4.18(@types/node@22.14.0)(terser@5.39.0))(vue@3.5.13(typescript@5.8.3))
+      tinyglobby:
+        specifier: ^0.2.12
+        version: 0.2.12
       tsx:
         specifier: ^4.19.3
         version: 4.19.3
