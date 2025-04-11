@@ -20,6 +20,9 @@ importers:
       framer-motion:
         specifier: ^12.6.5
         version: 12.6.5
+      vue:
+        specifier: ^3.5.13
+        version: 3.5.13(typescript@5.8.3)
     devDependencies:
       '@antfu/eslint-config':
         specifier: ^4.12.0
@@ -33,6 +36,9 @@ importers:
       '@rsbuild/plugin-react':
         specifier: ^1.2.0
         version: 1.2.0(@rsbuild/core@1.0.17)
+      '@rsbuild/plugin-vue':
+        specifier: ^1.0.7
+        version: 1.0.7(@rsbuild/core@1.0.17)(@vue/compiler-sfc@3.5.13)(vue@3.5.13(typescript@5.8.3))
       '@types/node':
         specifier: ^22.14.0
         version: 22.14.0
@@ -729,6 +735,11 @@ packages:
 
   '@rsbuild/plugin-react@1.2.0':
     resolution: {integrity: sha512-TXd0cvcLPF7OrO215vlGSyRXD6Fc3KQWhFuXFKOtRYp+C1Vc9oeW0GopUIStv2pI2/xtv2XX8GOAdJsnsc6lkA==}
+    peerDependencies:
+      '@rsbuild/core': 1.x
+
+  '@rsbuild/plugin-vue@1.0.7':
+    resolution: {integrity: sha512-VIXFIU2gcpRjDxZNR9QUZjFqWu3oPZ5a5AUe8cyv2moJBQzRPJ18VtPnIIcdlQB36Q8lm2Do0SSVqkXAuui65g==}
     peerDependencies:
       '@rsbuild/core': 1.x
 
@@ -1821,6 +1832,9 @@ packages:
     resolution: {integrity: sha512-EykJT/Q1KjTWctppgIAgfSO0tKVuZUjhgMr17kqTumMl6Afv3EISleU7qZUzoXDFTAHTDC4NOoG/ZxU3EvlMPQ==}
     engines: {node: '>=8'}
 
+  hash-sum@2.0.0:
+    resolution: {integrity: sha512-WdZTbAByD+pHfl/g9QSsBIIwy8IT+EsPiKDs0KNX+zSHhdDLFKdZu0BQHljvO+0QI/BasbMSUa8wYNCZTvhslg==}
+
   hasown@2.0.2:
     resolution: {integrity: sha512-0hJU9SCPvmMzIBdZFqNPXWa6dqh7WdH0cII9y+CyS8rG3nL48Bclra9HmKhVVUHyPWNH5Y7xDwAB7bfgSjkUMQ==}
     engines: {node: '>= 0.4'}
@@ -2666,6 +2680,18 @@ packages:
     peerDependencies:
       vue: ^3.4.37
 
+  vue-loader@17.4.2:
+    resolution: {integrity: sha512-yTKOA4R/VN4jqjw4y5HrynFL8AK0Z3/Jt7eOJXEitsm0GMRHDBjCfCiuTiLP7OESvsZYo2pATCWhDqxC5ZrM6w==}
+    peerDependencies:
+      '@vue/compiler-sfc': '*'
+      vue: '*'
+      webpack: ^4.1.0 || ^5.0.0-0
+    peerDependenciesMeta:
+      '@vue/compiler-sfc':
+        optional: true
+      vue:
+        optional: true
+
   vue@3.5.13:
     resolution: {integrity: sha512-wmeiSMxkZCSc+PM2w2VRsOYAZC8GdipNFRTsLSfodVqI9mbejKeXEGr8SckuLnrQPGe3oJN5c3K0vpoU9q/wCQ==}
     peerDependencies:
@@ -3242,6 +3268,19 @@ snapshots:
       react-refresh: 0.17.0
     transitivePeerDependencies:
       - webpack-hot-middleware
+
+  '@rsbuild/plugin-vue@1.0.7(@rsbuild/core@1.0.17)(@vue/compiler-sfc@3.5.13)(vue@3.5.13(typescript@5.8.3))':
+    dependencies:
+      '@rsbuild/core': 1.0.17
+      vue-loader: 17.4.2(@vue/compiler-sfc@3.5.13)(vue@3.5.13(typescript@5.8.3))(webpack@5.98.0)
+      webpack: 5.98.0
+    transitivePeerDependencies:
+      - '@swc/core'
+      - '@vue/compiler-sfc'
+      - esbuild
+      - uglify-js
+      - vue
+      - webpack-cli
 
   '@rspack/binding-darwin-arm64@1.0.14':
     optional: true
@@ -4549,6 +4588,8 @@ snapshots:
 
   has-flag@4.0.0: {}
 
+  hash-sum@2.0.0: {}
+
   hasown@2.0.2:
     dependencies:
       function-bind: 1.1.2
@@ -5566,6 +5607,16 @@ snapshots:
 
   vue-flow-layout@0.1.1(vue@3.5.13(typescript@5.8.3)):
     dependencies:
+      vue: 3.5.13(typescript@5.8.3)
+
+  vue-loader@17.4.2(@vue/compiler-sfc@3.5.13)(vue@3.5.13(typescript@5.8.3))(webpack@5.98.0):
+    dependencies:
+      chalk: 4.1.2
+      hash-sum: 2.0.0
+      watchpack: 2.4.2
+      webpack: 5.98.0
+    optionalDependencies:
+      '@vue/compiler-sfc': 3.5.13
       vue: 3.5.13(typescript@5.8.3)
 
   vue@3.5.13(typescript@5.8.3):
