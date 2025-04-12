@@ -1,29 +1,7 @@
-# Rsbuild Project
+<h3 align="center">
+  Schedule working days
+</h3>
 
-## Setup
-
-Install the dependencies:
-
-```bash
-pnpm install
-```
-
-## Get Started
-
-Start the dev server:
-
-```bash
-pnpm dev
-```
-
-Build the app for production:
-
-```bash
-pnpm build
-```
-
-Preview the production build locally:
-
-```bash
-pnpm preview
-```
+<p align="center">
+  <a href="https://github.com/kricsleo/day-react">React Version</a> ↔ <a href="https://github.com/kricsleo/day-vue">Vue Version</a>
+</p>
